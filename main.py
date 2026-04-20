@@ -7,6 +7,14 @@ from app.services.license_service import LicenseService
 from app.core.monitor_controller import MonitorController
 from app.ui.main_window import MainWindow
 
+# Impede o PyQt de "engolir" erros e fechar o aplicativo silenciosamente
+def custom_excepthook(type, value, traceback_info):
+    import traceback
+    traceback.print_exception(type, value, traceback_info)
+    print("\n⚠️ O SISTEMA CAPTUROU UM ERRO, MAS IMPEDIU O FECHAMENTO FATAL ⚠️")
+
+sys.excepthook = custom_excepthook
+
 def main():
     app = QApplication(sys.argv)
     

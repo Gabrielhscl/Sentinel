@@ -1,0 +1,29 @@
+# Ambientes Virtuais do Python
+venv/
+env/
+.env
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Banco de Dados do Sentinel
+*.db
+*.sqlite3
+sentinel_data.db
+
+# Arquivos Pesados de IA
+*.pt
+yolo11n.pt
+
+# Evidências e Logs Locais (Não subir fotos de segurança para o Git!)
+storage/
+storage/evidences/photos/*
+storage/evidences/videos/*
+!storage/evidences/photos/.gitkeep
+!storage/evidences/videos/.gitkeep
+
+# Arquivos de IDE (VSCode, PyCharm)
+.vscode/
+.idea/
